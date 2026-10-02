@@ -12,15 +12,14 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 /// this address is set once at deploy and is NOT the minter; minters never receive royalties on
 /// their own or anyone else's resales.
 ///
-/// The contract has no way to verify that a `tokenURI` a caller passes to `mint` actually
-/// corresponds to a real, owned sigil in the `magik` app -- that binding is enforced by the app's
-/// own API (only sigils the caller owns get a metadata URL to mint with), not by this contract.
-/// Anyone calling `mint` directly (bypassing the app) can mint arbitrary metadata pointing
-/// anywhere; this is an accepted, documented tradeoff of a permissionless mint, not a bug.
+/// The contract does not verify what a `tokenURI` passed to `mint` points at. Any binding between
+/// a token and an off-chain asset must be enforced by the minting front end (for example, by only
+/// issuing metadata URLs for assets the caller owns), not by this contract. Anyone calling `mint`
+/// directly can mint arbitrary metadata pointing anywhere; this is an accepted, documented
+/// tradeoff of a permissionless mint, not a bug.
 ///
-/// WARNING: unaudited. Unlike the sibling sell-tax/vault contracts in this repo, this one is
-/// intended for a real Base mainnet deploy -- give it a careful manual read-through (it is a
-/// small, standard-OpenZeppelin-based surface) before broadcasting.
+/// WARNING: unaudited. Intended for a real Base mainnet deploy, so give it a careful manual
+/// read-through (it is a small, standard-OpenZeppelin-based surface) before broadcasting.
 contract SigilNFT is ERC721, ERC721URIStorage, ERC2981, Ownable {
     uint256 public constant MAX_SUPPLY = 2300;
 
