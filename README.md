@@ -37,6 +37,9 @@ backend `signer`.
 - **Owner:** the deployer is `Ownable` owner. The only owner function is `setSigner(address)`, which
   rotates the voucher signer; outstanding vouchers from the old signer stop working.
 
+See [docs/INTEGRATION.md](docs/INTEGRATION.md) for the metadata format, the typed data to sign, and
+the checks a backend should make before issuing a voucher.
+
 ## Threat model and known limitations
 
 - **The `signer` is a trust point.** It decides what metadata is valid and when minting opens. A
@@ -108,6 +111,7 @@ address whose signatures authorize mints and reworks; the deployer can rotate it
 |------|----------|
 | `src/SigilNFT.sol` | The contract. |
 | `test/SigilNFT.t.sol` | Foundry unit tests. |
+| `docs/INTEGRATION.md` | Backend guide: metadata hosting, EIP-712 vouchers, pre-signing checks. |
 | `script/DeploySigilNFT.s.sol` | Mainnet deploy script (name, symbol, treasury, signer). |
 | `lib/` | `forge-std`, `openzeppelin-contracts` (submodules). |
 
