@@ -1,6 +1,6 @@
 # magik-sigil-nft
 
-`SigilNFT` is an ERC-721 collection, **"Illuminati Magik Sigil" (`SIGIL`)**: one token per sigil,
+`SigilNFT` is an ERC-721 collection, **"Illuminati.Earth Magik Sigil" (`SIGIL`)**: one token per sigil,
 2300 max supply, free to mint (gas only), a fixed 10% [EIP-2981](https://eips.ethereum.org/EIPS/eip-2981)
 royalty on secondary sales, and metadata the current holder can rework at any time. Minting and
 reworking are authorized by [EIP-712](https://eips.ethereum.org/EIPS/eip-712) vouchers signed by a

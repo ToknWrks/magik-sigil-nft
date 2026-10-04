@@ -12,7 +12,7 @@ standard ERC-721 metadata JSON:
 ```json
 {
   "name": "Sigil #1",
-  "description": "An Illuminati Magik Sigil.",
+  "description": "An Illuminati.Earth Magik Sigil.",
   "image": "ipfs://<image-CID>",
   "attributes": [{ "trait_type": "Element", "value": "Fire" }]
 }

@@ -8,7 +8,7 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 import {EIP712} from "@openzeppelin/contracts/utils/cryptography/EIP712.sol";
 import {ECDSA} from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 
-/// @notice Illuminati Magik Sigil collection: one token per sigil, capped at 2300 ever, free to
+/// @notice Illuminati.Earth Magik Sigil collection: one token per sigil, capped at 2300 ever, free to
 /// mint (gas only). Every secondary sale on a marketplace that honors EIP-2981 (OpenSea does) pays
 /// a fixed 10% royalty to `treasury` -- this address is set once at deploy and is NOT the minter.
 ///

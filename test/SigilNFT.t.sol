@@ -25,7 +25,7 @@ contract SigilNFTTest is Test {
 
     function setUp() public {
         (signerAddr, signerKey) = makeAddrAndKey("signer");
-        nft = new SigilNFT("Illuminati Magik Sigil", "SIGIL", treasury, signerAddr);
+        nft = new SigilNFT("Illuminati.Earth Magik Sigil", "SIGIL", treasury, signerAddr);
     }
 
     // ---------------------------------------------------------------- helpers
