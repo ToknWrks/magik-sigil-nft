@@ -5,7 +5,7 @@ import {Script, console2} from "forge-std/Script.sol";
 
 import {SigilNFT} from "../src/SigilNFT.sol";
 
-/// @notice Deploys the SigilNFT collection ("Illuminati.Earth Magik Sigil" / "SIGIL"), 2300 max supply,
+/// @notice Deploys the SigilNFT collection ("Illuminati.Earth Magik Sigil" / "SIGILNFT"), 2300 max supply,
 /// 10% EIP-2981 royalty to SIGIL_TREASURY_ADDRESS, mint/rework vouchers signed by
 /// SIGIL_SIGNER_ADDRESS (rotatable later by the deployer via setSigner). One-time, real mainnet
 /// deploy -- rehearse on an Anvil fork of Base mainnet first.
@@ -14,7 +14,7 @@ import {SigilNFT} from "../src/SigilNFT.sol";
 ///   forge script script/DeploySigilNFT.s.sol --rpc-url "$BASE_RPC_URL" --broadcast --verify -vv
 contract DeploySigilNFTScript is Script {
     string constant NAME = "Illuminati.Earth Magik Sigil";
-    string constant SYMBOL = "SIGIL";
+    string constant SYMBOL = "SIGILNFT"; // not "SIGIL": that ticker is reserved for the Illuminati Magik token
 
     function run() external returns (SigilNFT nft) {
         address treasury = vm.envAddress("SIGIL_TREASURY_ADDRESS");
